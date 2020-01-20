@@ -11,6 +11,10 @@
 
 </head>
 <body>
+<div class="alert alert-success wbdv-message">
+    <strong>Success!</strong> Profile successfully saved.
+</div>
+
 <div class="container-fluid">
     <h1> Profile </h1>
 
@@ -23,7 +27,7 @@
         <div class="col-sm-10">
             <input type="text"
                    readonly
-                   class="form-control"
+                   class="form-control wbdv-field wbdv-username"
                    id="responsive-username"
                    value="alice">
 
@@ -43,7 +47,7 @@
             Password</label>
         <div class="col-sm-10">
             <input type="password"
-                   class="form-control"
+                   class="form-control wbdv-field wbdv-password"
                    id="responsive-password"
                    value="yello">
 
@@ -51,12 +55,29 @@
         </div>
     </div>
 
+
+
 <!--
     <div>
     Password
     <input class="form-control"type="password"/>
     </div>
 -->
+
+    <div class="form-group row">
+        <label for="responsive-phone"
+               class="col-sm-2 col-form-label">
+
+            Phone Number</label>
+        <div class="col-sm-10">
+            <input type="tel"
+                   class="form-control wbdv-field wbdv-phone"
+                   id="responsive-phone"
+                   value="555-555-5555">
+
+
+        </div>
+    </div>
 
 
     <div class="form-group row">
@@ -66,7 +87,7 @@
             DOB</label>
         <div class="col-sm-10">
             <input type="date"
-                   class="form-control"
+                   class="form-control wbdv-field wbdv-dob"
                    id="responsive-DOB"
                    value="11/22/2019">
 
@@ -82,7 +103,7 @@
             Email</label>
         <div class="col-sm-10">
             <input type="email"
-                   class="form-control"
+                   class="form-control wbdv-field wbdv-email"
                    id="responsive-email"
                    value="johndoe@example.com">
 
@@ -91,19 +112,50 @@
     </div>
 
     <div class="form-group row">
-        <label for="responsive-salary"
+        <label for="responsive-row"
                class="col-sm-2 col-form-label">
 
-            Salary</label>
+            Role</label>
         <div class="col-sm-10">
-            <input type="number"
-                   class="form-control"
-                   id="responsive-salary"
-                   value="">
+        <select class="form-control wbdv-field wbdv-role" id="responsive-row">
+            <option>
+                Faculty
+            </option>
+            <option>
+                Student
+            </option>
+        </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <button class="btn btn-primary btn-block wbdv-button wbdv-update">Update</button>
 
 
         </div>
+
     </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <a href="http://localhost:8080/index.html"class="btn btn-primary btn-block wbdv-button wbdv-logout">Logout</a>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+    </div>
+
+    </div>
+
 
 <!--
     <div>
