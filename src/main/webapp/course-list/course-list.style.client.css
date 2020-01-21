@@ -1,0 +1,51 @@
+body{
+    background-color: lightgray;
+}
+
+h1{
+    background-color: black;
+    color:white;
+    font-size:30px;
+    margin:0;
+}
+h2{
+    background-color: lightgray;
+    margin:0;
+    font-size:15px;
+    border-bottom: 1px solid darkgrey;
+
+}
+.wbdv-row.wbdv-icon{
+    margin-left: 30px;
+}
+.wbdv-row.wbdv-modified-date{
+    margin-left: 50px;
+}
+.wbdv-row.wbdv-owner{
+    margin-left: 350px;
+}
+.middle{
+    background-color:white;
+}
+.wbdv-row.wbdv-button.wbdv-delete{
+    margin-left: 140px;
+}
+.wbdv-header.wbdv-sort{
+    margin-left: 30px;
+}
+.last-modified{
+    margin-left: 13px;
+}
+.wbdv-field.wbdv-hamburger{
+    margin-top: 10px;
+    color:white;
+}
+.wbdv-field.wbdv-new-course{
+    margin-top: 2px;
+    margin-right:20px;
+    width: 500px;
+}
+.wbdv-button.wbdv-add-course{
+    margin-top: 7px;
+    margin-left: 30px;
+}
