@@ -41,9 +41,25 @@ h1{
 }
 
 .save-button{
-    margin-left: 40px;
+    margin-left: 50px;
+    float:right;
+    background-color:green;
+    color:white;
 }
 
+.wbdv-header-text{
+    margin-top:50px;
+
+}
+
+.preview-text{
+    margin-left:15px;
+    font-size:35px;
+}
+.heading-text{
+    margin-left:15px;
+    font-size:50px;
+}
 /* The switch - the box around the slider */
 .switch {
     position: relative;
@@ -51,7 +67,8 @@ h1{
     width: 50px;
     height: 34px;
     margin-left: 35px;
-}
+
+    }
 
 /* Hide default HTML checkbox */
 .switch input {
@@ -71,6 +88,8 @@ h1{
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
+    float:right;
+
 }
 
 .slider:before {

@@ -28,9 +28,9 @@
         <div class="row container">
 
             <ul class="nav nav-tabs wbdv-header-list">
-                <i class="fa fa-times-circle"></i>
+                <i class="fa fa-times-circle wbdv-course-editor wbdv-close"></i>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link wbdv-course-title" href="#">
                         Course Editor
                     </a>
                 </li>
@@ -135,26 +135,40 @@
 
                     <Button type="Button" class="btn btn-light wbdv-topic-add-btn"> +</Button>
 
-                    <Button type="Button" class="btn btn-light save-button"> Save</Button>
 
-                    <label class="switch">
-                        <input type="checkbox" value="preview">
-                        <span class="slider round"></span>
-                    Preview </label>
+
+
                 </ul>
 
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <div class="offset-7">
+                <Button type="Button" class="btn btn-light save-button"> Save</Button>
+
+                <label class="switch">
+                    <input type="checkbox" value="preview">
+                    <span class="slider round"></span>
+                    Preview </label>
 
             </div>
         </div>
 
         <div class="container">
             <div class="row">
-                ...
+                <p>
+
+                </p>
 
             </div>
             <div class="row">
                 <div class="col-4">
-                ...
+                <p>
+
+                </p>
                 </div>
                 <div class="col-8">
 
@@ -180,7 +194,9 @@
             <div class="row">
 
                 <div class="col-1">
-                    ...
+                    <p>
+
+                    </p>
                 </div>
             <div class="col-11">
                 <select class="custom-select">
@@ -190,33 +206,57 @@
                     <option value="w3">widget</option>
                 </select>
 
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">Header Text</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Header Text" aria-describedby="basic-addon1">
-                </div>
 
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon2"></span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Header Text" aria-describedby="basic-addon1">
-                </div>
-
-
+            </div>
 
 
             </div>
 
 
+            <div class="row">
+                <div class="col-1">
+                    <p>
+
+                    </p>
+
+                </div>
+                <div class="col-11">
+
+                    <div class="input-group mb-3">
+
+                        <input type="text" class="form-control wbdv-header-text" placeholder="Header Text" aria-describedby="basic-addon1">
+                    </div>
+                </div>
             </div>
 
             <div class="row">
+                <div class="col-1">
+                    <p>
 
+                    </p>
 
+                </div>
+                <div class="col-11">
+
+                    <div class="input-group mb-3">
+
+                        <input type="text" class="form-control wbdv-header-text" placeholder="Widgetname" aria-describedby="basic-addon1">
+                    </div>
+                </div>
             </div>
 
+
+            <div class="row">
+                <div class="offset-1">
+                    <a class="preview-text"> Preview </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="offset-1">
+                    <a class="heading-text"> Heading Text </a>
+                </div>
+            </div>
 
         </div>
 
