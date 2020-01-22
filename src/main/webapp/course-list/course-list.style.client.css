@@ -18,6 +18,22 @@ h2{
 .wbdv-row.wbdv-icon{
     margin-left: 30px;
 }
+.wbdv-header.wbdv-last-modified{
+    float:right;
+    margin-right:100px;
+
+}
+.wbdv-header.wbdv-owner{
+    float:right;
+    margin-right:10px;
+}
+.wbdv-button.wbdv-grid-layout{
+    float:right;
+}
+.wbdv-button.wbdv-list-layout{
+    float:right;
+    margin-left:10px;
+}
 .wbdv-row.wbdv-modified-date{
     margin-left: 50px;
 }
