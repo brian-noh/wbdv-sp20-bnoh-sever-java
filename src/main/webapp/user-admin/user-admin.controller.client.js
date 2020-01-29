@@ -9,7 +9,8 @@
     var $removeBtn = $("wbdv-remove");
     var $editBtn = $("wbdv-edit");
     var $createBtn;
-    var $firstNameFld = $("#firstnameFld");
+    var $updateBtn;
+    var $firstNameFld = $("#firstNameFld");
     var $lastNameFld = $("#lastNameFld");
     var $roleFld= $("#roleFld");
     var $userRowTemplate = $(".wbdv-template");
@@ -67,7 +68,19 @@
                 renderUsers()
             })
     }
-    function selectUser() {}
+
+    let currentUserIndex = -1
+    function editUser(index) {
+        currentUserIndex = index
+        let user = users[index]
+        let userId = user._id
+
+        userService.findUserById(userId)
+            .then(actualUser => {
+                $usernameFld.val(actualUser.username)
+
+            })
+        }
 
 
 
@@ -97,13 +110,12 @@
         $tbody.empty()
         for (let u in users) {
             let user = users[u];
-            // $remove.click(() => deleteUser(u))
 
             $removeBtn = $("<button> Delete</button>")
             $removeBtn.click(() => deleteUser(u))
 
             $editBtn = $("<button> Edit</button>")
-            $editBtn.click(() => updateUser(u))
+            $editBtn.click(() => editUser(u))
 
 
             const rowClone = $userRowTemplate.clone();
@@ -126,9 +138,10 @@
 
         $usernameFld = $("#usernameFld");
         $createBtn = $("#createBtn");
+        $updateBtn = $("#updateBtn");
 
         $createBtn.click(createUser)
-        //$updateBtn.click(updateUser)
+        $updateBtn.click(updateUser)
 
         userService
             .findAllUsers()
