@@ -78,6 +78,10 @@
         userService.findUserById(userId)
             .then(actualUser => {
                 $usernameFld.val(actualUser.username)
+                $passwordFld.val(actualUser.password)
+                $firstNameFld.val(actualUser.firstName)
+                $lastNameFld.val(actualUser.lastName)
+                $roleFld.val(actualUser.role)
 
             })
         }
@@ -105,16 +109,29 @@
                 findAllUsers()
             })
     }
-    function renderUser(user) {}
+    function renderUser(user) {
+        let userIndex = users[user];
+        const rowClone = $userRowTemplate.clone();
+        rowClone.removeClass('wbdv-hidden');
+        rowClone.find('.wbdv-username').html(userIndex.username);
+        //rowClone.find('.wbdv-password').html(userIndex.password);
+        rowClone.find('.wbdv-first-name').html(userIndex.firstName);
+        rowClone.find('.wbdv-last-name').html(userIndex.lastName);
+        rowClone.find('.wbdv-role').html(userIndex.role);
+
+        $tbody.append(rowClone);
+
+
+    }
     function renderUsers() {
         $tbody.empty()
         for (let u in users) {
             let user = users[u];
 
-            $removeBtn = $("<button> Delete</button>")
+            $removeBtn = $("<button id='remove-button'> Delete</button>")
             $removeBtn.click(() => deleteUser(u))
 
-            $editBtn = $("<button> Edit</button>")
+            $editBtn = $("<button id='edit-button'> Edit</button>")
             $editBtn.click(() => editUser(u))
 
 
