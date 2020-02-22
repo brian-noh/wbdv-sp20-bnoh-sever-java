@@ -71,4 +71,14 @@ public class WidgetService {
 
     return 1;
   }
+
+  public int updateWidget(String wid, Widget updatedWidget){
+    for(int i = 0; i < widgetList.size(); i++){
+      if(widgetList.get(i).getId().equals(wid)){
+        widgetList.set(i, updatedWidget);
+        return 1;
+      }
+    }
+    return 0;
+  }
 }

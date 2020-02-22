@@ -8,8 +8,13 @@ public class Widget {
   private String topicId;
   private int size = 2;
 
+  public int getSize() {
+    return size;
+  }
 
-
+  public void setSize(int size) {
+    this.size = size;
+  }
 
   public String getTopicId() {
     return topicId;
