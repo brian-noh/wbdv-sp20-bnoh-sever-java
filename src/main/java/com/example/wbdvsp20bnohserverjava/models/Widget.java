@@ -1,9 +1,21 @@
 package com.example.wbdvsp20bnohserverjava.models;
 
-public class Widget {
-  private String id;
-  private String title;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+//@Table(name="Widgets")
+
+public class Widget {
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer id;
+
+  private String title;
   private String type = "HEADING";
   private String topicId;
   private int size = 2;
@@ -38,17 +50,17 @@ public class Widget {
 
   }
 
-  public Widget(String id, String title, String type) {
+  public Widget(Integer id, String title, String type) {
     this.id = id;
     this.title = title;
     this.type = type;
   }
 
-  public String getId() {
+  public Integer getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(Integer id) {
     this.id = id;
   }
 

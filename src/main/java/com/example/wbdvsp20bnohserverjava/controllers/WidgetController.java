@@ -36,20 +36,20 @@ public class WidgetController {
 
   @DeleteMapping("/widgets/{widgetId}")
   public int deleteWidget(
-          @PathVariable("widgetId") String wid){
+          @PathVariable("widgetId") Integer wid){
 
     return service.deleteWidget(wid);
   }
   @GetMapping("/widgets/{widgetId}")
   public Widget findWidgetById(
-          @PathVariable("widgetId") String wid){
+          @PathVariable("widgetId") Integer wid){
 
     return service.findWidgetById(wid);
   }
 
   @PutMapping("/widgets/{widgetId}")
   public int updateWidget(
-          @PathVariable("widgetId") String wid, @RequestBody Widget updatedWidget){
+          @PathVariable("widgetId") Integer wid, @RequestBody Widget updatedWidget){
 
     return service.updateWidget(wid, updatedWidget);
   }
@@ -60,17 +60,5 @@ public class WidgetController {
     }
 
 
-
-  @GetMapping("/w1")
-  public Widget getWidget(){
-    Widget w1 = new Widget("123", "Widget 1", "PARAGRAPH");
-    return w1;
-  }
-
-  @GetMapping("/hello")
-
-  public String sayHello(){
-    return "Hello World";
-  }
 
 }
