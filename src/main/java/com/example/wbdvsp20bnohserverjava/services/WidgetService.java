@@ -5,17 +5,18 @@ import com.example.wbdvsp20bnohserverjava.repositories.WidgetRepository;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class WidgetService {
   List<Widget> widgetList = new ArrayList<Widget>();
+
   @Autowired
   WidgetRepository widgetRepository;
-
-
 
   public Widget createWidget(Widget newWidget){
     widgetList.add(newWidget);
@@ -28,24 +29,12 @@ public class WidgetService {
   }
 
   public Widget findWidgetById(Integer wid){
-    for(Widget w: widgetList){
-      if(w.getId().equals(wid)){
-        return w;
-      }
-    }
-    return null;
+    return widgetRepository.findById(wid).get();
   }
 
 
   public List<Widget> findWidgetsForTopic(String topicId) {
-    List<Widget> results = new ArrayList<Widget>();
-    for(Widget w:widgetList){
-      if(w.getTopicId().equals(topicId)){
-        results.add(w);
-
-      }
-    }
-    return results;
+    return widgetRepository.findWidgetsForTopic(topicId);
 
   }
 

@@ -3,6 +3,7 @@ package com.example.wbdvsp20bnohserverjava.controllers;
 import com.example.wbdvsp20bnohserverjava.models.Widget;
 import com.example.wbdvsp20bnohserverjava.services.WidgetService;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,15 +19,18 @@ import java.util.List;
 @CrossOrigin(origins = {"*"})
 public class WidgetController {
 
- WidgetService service = new WidgetService();
+  @Autowired
+  WidgetService service;
 
 
-  @PostMapping("/widgets")
-  public Widget createWidget(
-          @RequestBody Widget newWidget){
 
-    return service.createWidget(newWidget);
-  }
+//
+//  @PostMapping("/widgets")
+//  public Widget createWidget(
+//          @RequestBody Widget newWidget){
+//
+//    return service.createWidget(newWidget);
+//  }
 
 
   @GetMapping("/widgets")
