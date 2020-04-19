@@ -32,6 +32,13 @@ public class WidgetController {
 //    return service.createWidget(newWidget);
 //  }
 
+  @GetMapping("/widgets/create")
+  public Widget createWidgetNotRest(){
+    Widget w1 = new Widget();
+    w1.setSize(45);
+    w1.setTitle("Big Widget");
+    return service.createWidget(w1);
+  }
 
   @GetMapping("/widgets")
   public List<Widget> findAllWidgets(){
@@ -44,6 +51,13 @@ public class WidgetController {
 
     return service.deleteWidget(wid);
   }
+  @GetMapping("/widgets/{widgetId}/delete")
+  public int deleteWidgetNotREST(
+          @PathVariable("widgetId") Integer wid){
+
+    return service.deleteWidget(wid);
+  }
+
   @GetMapping("/widgets/{widgetId}")
   public Widget findWidgetById(
           @PathVariable("widgetId") Integer wid){

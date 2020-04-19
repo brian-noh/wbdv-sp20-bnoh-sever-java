@@ -19,17 +19,18 @@ public class WidgetService {
   WidgetRepository widgetRepository;
 
   public Widget createWidget(Widget newWidget){
-    widgetList.add(newWidget);
-    return newWidget;
+    return widgetRepository.save(newWidget);
   }
 
 
   public List<Widget> findAllWidgets(){
-    return (List<Widget>)widgetRepository.findAll();
+
+    return widgetRepository.findAllWidgets();
   }
 
   public Widget findWidgetById(Integer wid){
-    return widgetRepository.findById(wid).get();
+    return widgetRepository.findWidgetById(wid);
+    //return widgetRepository.findById(wid).get();
   }
 
 
@@ -39,9 +40,7 @@ public class WidgetService {
   }
 
   public int deleteWidget(Integer wid) {
-    widgetList = widgetList.stream()
-            .filter(w-> !w.getId().equals(wid)).collect(Collectors.toList());
-
+    widgetRepository.deleteById(wid);
     return 1;
   }
 
