@@ -71,11 +71,12 @@ public class WidgetController {
 
     return service.updateWidget(wid, updatedWidget);
   }
-  @GetMapping("topics/{tid}/widgets")
-  public List<Widget> findWidgetsForTopic(
-          @PathVariable("tid") String topicId){
-            return service.findWidgetsForTopic(topicId);
-    }
+
+  //  @GetMapping("topics/{tid}/widgets")
+//  public List<Widget> findWidgetsForTopic(
+//          @PathVariable("tid") String topicId){
+//            return service.findWidgetsForTopic(topicId);
+//    }
 
 
 

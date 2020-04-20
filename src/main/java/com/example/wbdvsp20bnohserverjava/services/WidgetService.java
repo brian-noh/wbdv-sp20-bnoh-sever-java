@@ -33,11 +33,11 @@ public class WidgetService {
     //return widgetRepository.findById(wid).get();
   }
 
-
-  public List<Widget> findWidgetsForTopic(String topicId) {
-    return widgetRepository.findWidgetsForTopic(topicId);
-
-  }
+//
+//  public List<Widget> findWidgetsForTopic(String topicId) {
+//    return widgetRepository.findWidgetsForTopic(topicId);
+//
+//  }
 
   public int deleteWidget(Integer wid) {
     widgetRepository.deleteById(wid);

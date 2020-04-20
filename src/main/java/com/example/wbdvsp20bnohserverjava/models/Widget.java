@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -15,8 +16,13 @@ public class Widget {
 
   private String title;
   private String type = "HEADING";
-  private String topicId;
   private int size = 2;
+  @ManyToOne
+  private Topic topic;
+
+  public Topic getTopic(){
+    return topic;
+  }
 
   public int getSize() {
     return size;
@@ -26,13 +32,6 @@ public class Widget {
     this.size = size;
   }
 
-  public String getTopicId() {
-    return topicId;
-  }
-
-  public void setTopicId(String topicId) {
-    this.topicId = topicId;
-  }
 
   public String getType() {
     return type;
