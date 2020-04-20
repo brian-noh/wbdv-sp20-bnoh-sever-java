@@ -14,11 +14,13 @@ public interface TopicRepository
   @Query("SELECT topic FROM Topic topic")
   public List<Topic> findAllTopics();
 
+  @Query("SELECT topic FROM Topic topic WHERE topic.lessonId=:lid")
+  public List<Topic> findTopicsForLesson(
+          @Param("lid") String lessonId);
+
+
   @Query("SELECT topic FROM Topic topic WHERE topic.id=:tid")
   public Topic findTopicById(
           @Param("tid") Integer tid);
 
-  @Query("SELECT topic FROM Topic topic WHERE topic.lessonId=:lid")
-  public List<Topic> findTopicsForLesson(
-          @Param("lid") String lessonId);
 }
