@@ -15,13 +15,22 @@ public class Topic {
 
   private Integer id;
   private String title;
+  private String lessonId;
 
   @OneToMany(mappedBy = "topic")
   private List<Widget> widgets;
 
+  public String getLessonId() {
+    return lessonId;
+  }
+
+  public void setLessonId(String lessonId) {
+    this.lessonId = lessonId;
+  }
   public Integer getId(){
     return id;
   }
+
 
   public void setId(Integer id) {
     this.id = id;

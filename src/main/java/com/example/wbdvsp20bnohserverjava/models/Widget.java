@@ -24,6 +24,10 @@ public class Widget {
     return topic;
   }
 
+  public void setTopic(Topic topic){
+    this.topic = topic;
+  }
+
   public int getSize() {
     return size;
   }
